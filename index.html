@@ -50,6 +50,11 @@
         .reset-btn:hover {
             background-color: #a52a1e;
         }
+        .footer {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +63,7 @@
         <button class="count-btn" onclick="increaseCount()">استغفر الله</button>
         <button class="reset-btn" onclick="resetCount()">إعادة التصفير</button>
     </div>
+    <div class="footer">تم الإنشاء بواسطة شوق 💖</div>
 
     <script>
         let count = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
