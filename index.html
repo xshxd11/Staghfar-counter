@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عداد الاستغفار</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 50px;
+            color: #2c3e50;
+        }
+        button {
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .count-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+        .reset-btn {
+            background-color: #c0392b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <button class="count-btn" onclick="increaseCount()">استغفر الله</button>
+    <button class="reset-btn" onclick="resetCount()">إعادة التصفير</button>
+
+    <script>
+        let count = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
+        document.getElementById("counter").innerText = count;
+        
+        function increaseCount() {
+            count++;
+            document.getElementById("counter").innerText = count;
+            localStorage.setItem("count", count);
+        }
+        
+        function resetCount() {
+            count = 0;
+            document.getElementById("counter").innerText = count;
+            localStorage.setItem("count", count);
+        }
+    </script>
+</body>
+</html>
