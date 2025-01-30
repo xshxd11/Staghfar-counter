@@ -8,34 +8,56 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #d4edda;
+            background-color: #d4edda; /* لون أخضر فاتح */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            font-size: 50px;
+            font-size: 60px;
             color: #2c3e50;
+            margin-bottom: 20px;
         }
         button {
-            font-size: 20px;
+            font-size: 22px;
             margin: 10px;
-            padding: 10px 20px;
+            padding: 15px 30px;
             cursor: pointer;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: 0.3s;
         }
         .count-btn {
             background-color: #27ae60;
             color: white;
         }
+        .count-btn:hover {
+            background-color: #219150;
+        }
         .reset-btn {
             background-color: #c0392b;
             color: white;
         }
+        .reset-btn:hover {
+            background-color: #a52a1e;
+        }
     </style>
 </head>
 <body>
-    <h1 id="counter">0</h1>
-    <button class="count-btn" onclick="increaseCount()">استغفر الله</button>
-    <button class="reset-btn" onclick="resetCount()">إعادة التصفير</button>
+    <div class="container">
+        <h1 id="counter">0</h1>
+        <button class="count-btn" onclick="increaseCount()">استغفر الله</button>
+        <button class="reset-btn" onclick="resetCount()">إعادة التصفير</button>
+    </div>
 
     <script>
         let count = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
